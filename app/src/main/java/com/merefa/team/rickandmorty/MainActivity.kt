@@ -19,6 +19,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.merefa.team.rickandmorty.domain.model.Character
+import com.merefa.team.rickandmorty.ui.components.CharacterCard
 import com.merefa.team.rickandmorty.ui.theme.RickAndMortyTheme
 
 class MainActivity : ComponentActivity() {
@@ -57,24 +59,68 @@ fun HomeScreen() {
                 text = stringResource(R.string.learn_jetpack_compose_by_building_a_real_app_step_by_step),
                 style = MaterialTheme.typography.bodyLarge
             )
-            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.margin_24)))
-            Button(onClick = { }) {
-                Text(text = stringResource(R.string.start_exploring))
-            }
-            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.margin_32)))
-            Text(
-                text = stringResource(R.string.today_s_goal),
-                style = MaterialTheme.typography.bodyMedium
-            )
-            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.margin_4)))
-            Text(
-                text = stringResource(R.string.build_your_first_compose_screen),
-                style = MaterialTheme.typography.bodySmall
+//            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.margin_24)))
+//            Button(onClick = { }) {
+//                Text(text = stringResource(R.string.start_exploring))
+//            }
+//            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.margin_32)))
+//            Text(
+//                text = stringResource(R.string.today_s_goal),
+//                style = MaterialTheme.typography.bodyMedium
+//            )
+//            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.margin_4)))
+//            Text(
+//                text = stringResource(R.string.build_your_first_compose_screen),
+//                style = MaterialTheme.typography.bodySmall
+//            )
+//            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.margin_12)))
+//            Button(onClick = { }) {
+//                Text(text = stringResource(R.string.open_favorites))
+//            }
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.margin_12)))
+            CharacterCard(
+                character = Character(
+                    name = "Rick Sanchez",
+                    species = "Human",
+                    status = "Alive",
+                    origin = "Earth",
+                    imageResId = R.drawable.ic_rick
+                ),
+                modifier = Modifier
             )
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.margin_12)))
-            Button(onClick = { }) {
-                Text(text = stringResource(R.string.open_favorites))
-            }
+            CharacterCard(
+                character = Character(
+                    name = "Morty Smith",
+                    species = "Human",
+                    status = "Alive",
+                    origin = "Earth",
+                    imageResId = R.drawable.ic_morty
+                ),
+                modifier = Modifier
+            )
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.margin_12)))
+            CharacterCard(
+                character = Character(
+                    name = "Julius Caesar",
+                    species = "Human",
+                    status = "Dead",
+                    origin = "Earth",
+                    imageResId = R.drawable.ic_caesar
+                ),
+                modifier = Modifier
+            )
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.margin_12)))
+            CharacterCard(
+                character = Character(
+                    name = "Unknown Smith",
+                    species = "Human",
+                    status = "???",
+                    origin = "Earth",
+                    imageResId = R.drawable.ic_unknowen
+                ),
+                modifier = Modifier
+            )
         }
     }
 }

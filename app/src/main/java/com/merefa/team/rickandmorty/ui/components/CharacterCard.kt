@@ -62,7 +62,7 @@ fun CharacterCard(
                 ) {
                     Text(
                         text = character.name,
-                        style = MaterialTheme.typography.bodyMedium,
+                        style = MaterialTheme.typography.titleMedium,
                         modifier = Modifier.weight(1f)
                     )
                     Icon(
@@ -74,7 +74,7 @@ fun CharacterCard(
                 }
 
                 Text(
-                    text = "${character.species} - ${character.origin}",
+                    text = "${character.species} - ${character.status}",
                     style = MaterialTheme.typography.bodyMedium
                 )
                 Text(
