@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RickAndMorty</string>
+    <string name="rick_and_morty_explorer">Rick and Morty Explorer</string>
+    <string name="learn_jetpack_compose_by_building_a_real_app_step_by_step">Learn Jetpack Compose by building a real app step by step.</string>
+    <string name="start_exploring">Start exploring</string>
+    <string name="build_your_first_compose_screen">Build your first Compose screen</string>
+    <string name="today_s_goal">Today\'s goal:</string>
+    <string name="open_favorites">Open favorites</string>
+</resources>
