@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -19,8 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.merefa.team.rickandmorty.domain.model.Character
-import com.merefa.team.rickandmorty.ui.components.CharacterCard
+import com.merefa.team.rickandmorty.data.CharactersMock
+import com.merefa.team.rickandmorty.ui.scene.CharacterListScreen
 import com.merefa.team.rickandmorty.ui.theme.RickAndMortyTheme
 
 class MainActivity : ComponentActivity() {
@@ -59,6 +58,7 @@ fun HomeScreen() {
                 text = stringResource(R.string.learn_jetpack_compose_by_building_a_real_app_step_by_step),
                 style = MaterialTheme.typography.bodyLarge
             )
+            CharacterListScreen(characters = CharactersMock.getCharacters())
         }
     }
 }

@@ -28,7 +28,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.merefa.team.rickandmorty.R
-import com.merefa.team.rickandmorty.domain.model.Character
 import com.merefa.team.rickandmorty.domain.model.CharacterUIModel
 import com.merefa.team.rickandmorty.ui.theme.RickAndMortyTheme
 
@@ -47,7 +46,7 @@ fun CharacterCard(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
-                painter = painterResource(character.imageUrl),
+                painter = painterResource(character.imageResId),
                 contentDescription = character.name,
                 modifier = Modifier
                     .size(96.dp)
@@ -111,7 +110,7 @@ fun CharacterCardPreview() {
                 name = "Rick Sanchez",
                 status = "Alive",
                 species = "Human",
-                imageUrl = R.drawable.ic_rick,
+                imageResId = R.drawable.ic_rick,
                 origin = "Earth"
             ),
             modifier = Modifier

@@ -8,5 +8,5 @@ data class CharacterUIModel(
     val status: String,
     val species: String,
     val origin: String,
-    @DrawableRes val imageUrl: Int
+    @DrawableRes val imageResId: Int
 )
