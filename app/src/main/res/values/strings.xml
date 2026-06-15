@@ -6,4 +6,6 @@
     <string name="build_your_first_compose_screen">Build your first Compose screen</string>
     <string name="today_s_goal">Today\'s goal:</string>
     <string name="open_favorites">Open favorites</string>
+    <string name="status">Status</string>
+    <string name="species">Species</string>
 </resources>

@@ -24,15 +24,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.merefa.team.rickandmorty.R
 import com.merefa.team.rickandmorty.domain.model.Character
+import com.merefa.team.rickandmorty.domain.model.CharacterUIModel
 import com.merefa.team.rickandmorty.ui.theme.RickAndMortyTheme
 
 @Composable
 fun CharacterCard(
-    character: Character,
+    character: CharacterUIModel,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -45,7 +47,7 @@ fun CharacterCard(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
-                painter = painterResource(character.imageResId),
+                painter = painterResource(character.imageUrl),
                 contentDescription = character.name,
                 modifier = Modifier
                     .size(96.dp)
@@ -74,8 +76,12 @@ fun CharacterCard(
                 }
 
                 Text(
-                    text = "${character.species} - ${character.status}",
-                    style = MaterialTheme.typography.bodyMedium
+                    text = "${stringResource(R.string.status)}: ${character.status}",
+                    style = MaterialTheme.typography.bodySmall
+                )
+                Text(
+                    text = "${stringResource(R.string.species)}: ${character.species}",
+                    style = MaterialTheme.typography.bodySmall
                 )
                 Text(
                     text = character.origin,
@@ -100,12 +106,13 @@ private fun getStatusColor(status: String): Color {
 fun CharacterCardPreview() {
     RickAndMortyTheme {
         CharacterCard(
-            character = Character(
+            character = CharacterUIModel(
+                id = 1,
                 name = "Rick Sanchez",
-                species = "Human",
                 status = "Alive",
-                origin = "Earth",
-                imageResId = R.drawable.ic_rick
+                species = "Human",
+                imageUrl = R.drawable.ic_rick,
+                origin = "Earth"
             ),
             modifier = Modifier
         )
