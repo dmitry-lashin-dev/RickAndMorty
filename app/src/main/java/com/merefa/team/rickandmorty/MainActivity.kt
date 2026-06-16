@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun RickAndMortyExplorerApp() {
     RickAndMortyTheme {
-        HomeScreen()
+        CharacterListScreen(characters = CharactersMock.getCharacters())
     }
 }
 
@@ -58,7 +58,6 @@ fun HomeScreen() {
                 text = stringResource(R.string.learn_jetpack_compose_by_building_a_real_app_step_by_step),
                 style = MaterialTheme.typography.bodyLarge
             )
-            CharacterListScreen(characters = CharactersMock.getCharacters())
         }
     }
 }
