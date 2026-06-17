@@ -8,4 +8,6 @@
     <string name="open_favorites">Open favorites</string>
     <string name="status">Status</string>
     <string name="species">Species</string>
+    <string name="search">Search Character</string>
+    <string name="no_characters_found">No characters found\n</string>
 </resources>
